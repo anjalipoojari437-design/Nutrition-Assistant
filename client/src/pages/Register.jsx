@@ -1,8 +1,11 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Register.css";
 import API from "../services/api";
 
 function Register() {
+  const navigate = useNavigate();
+
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -55,6 +58,8 @@ function Register() {
         weight: "",
         password: "",
       });
+
+      navigate("/login");
 
     } catch (err) {
       alert(err.response?.data?.message || "Registration Failed");

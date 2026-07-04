@@ -1,63 +1,85 @@
-.userdata-container{
-min-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-padding:50px;
-background:#F5FFF7;
+.userdata-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
 }
 
-.userdata-card{
-width:600px;
-background:white;
-padding:40px;
-border-radius:20px;
-box-shadow:0 10px 30px rgba(0,0,0,.1);
+.userdata-card {
+  width: 100%;
+  max-width: 600px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 35px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-.userdata-card h1{
-text-align:center;
-color:#2E7D32;
-margin-bottom:10px;
+.userdata-card h1 {
+  text-align: center;
+  color: #2e7d32;
+  margin-bottom: 25px;
 }
 
-.userdata-card p{
-text-align:center;
-margin-bottom:30px;
-color:#666;
+.userdata-card label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 8px;
+  font-weight: bold;
 }
 
-.userdata-form{
-display:flex;
-flex-direction:column;
-gap:18px;
+.userdata-card input,
+.userdata-card select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
 }
 
-.userdata-form input,
-.userdata-form select{
-padding:15px;
-border:1px solid #ccc;
-border-radius:10px;
-font-size:16px;
+.userdata-card input:focus,
+.userdata-card select:focus {
+  border-color: #2e7d32;
 }
 
-.userdata-form input:focus,
-.userdata-form select:focus{
-outline:none;
-border-color:#2E7D32;
+.bmi-box {
+  margin-top: 25px;
+  background: #e8f5e9;
+  border-radius: 15px;
+  text-align: center;
+  padding: 20px;
 }
 
-.userdata-form button{
-padding:15px;
-background:#2E7D32;
-color:white;
-border:none;
-border-radius:10px;
-font-size:18px;
-cursor:pointer;
-transition:.3s;
+.bmi-box h2 {
+  color: #2e7d32;
+  margin-bottom: 10px;
 }
 
-.userdata-form button:hover{
-background:#1B5E20;
+.bmi-box h1 {
+  font-size: 50px;
+  color: #1b5e20;
+  margin: 0;
+}
+
+.bmi-box h3 {
+  color: #388e3c;
+}
+
+.userdata-card button {
+  width: 100%;
+  margin-top: 25px;
+  padding: 14px;
+  background: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.userdata-card button:hover {
+  background: #1b5e20;
 }

@@ -1,72 +1,80 @@
+import React from "react";
 import "./NewSuggestion.css";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 
 function NewSuggestion() {
+  const healthData =
+    JSON.parse(localStorage.getItem("healthData")) || {};
+
+  const height = Number(healthData.height || 0);
+  const weight = Number(healthData.weight || 0);
+
+  let bmi = 0;
+
+  if (height > 0 && weight > 0) {
+    bmi = (
+      weight /
+      ((height / 100) * (height / 100))
+    ).toFixed(1);
+  }
+
+  let suggestions = [];
+
+  if (bmi === 0) {
+    suggestions = [
+      "Please fill your Health Data first.",
+    ];
+  } else if (bmi < 18.5) {
+    suggestions = [
+      "🥛 Drink milk daily",
+      "🥜 Eat nuts and dry fruits",
+      "🍚 Increase healthy carbohydrates",
+      "🍗 Consume more protein",
+      "🥑 Add healthy fats like avocado",
+    ];
+  } else if (bmi < 25) {
+    suggestions = [
+      "🥗 Continue a balanced diet",
+      "🍎 Eat fresh fruits",
+      "💧 Drink 3 litres of water",
+      "🏃 Exercise 30 minutes daily",
+      "😴 Sleep 7–8 hours",
+    ];
+  } else if (bmi < 30) {
+    suggestions = [
+      "🥦 Eat more vegetables",
+      "🚫 Avoid sugary drinks",
+      "🍗 Choose lean protein",
+      "🚶 Walk 45 minutes daily",
+      "💧 Stay hydrated",
+    ];
+  } else {
+    suggestions = [
+      "🥗 Follow a calorie deficit diet",
+      "🏃 Exercise 60 minutes daily",
+      "🍟 Avoid junk food",
+      "🍎 Eat fruits and vegetables",
+      "👨‍⚕️ Consult a dietitian",
+    ];
+  }
+
   return (
-    <>
-      <Navbar />
+    <div className="suggestion-container">
 
-      <div className="suggestion-page">
+      <div className="suggestion-card">
 
-        <h1>🥗 Personalized Nutrition Suggestions</h1>
-        <p className="subtitle">
-          Based on your health profile, here are today's recommendations.
-        </p>
+        <h1>🥗 Nutrition Suggestions</h1>
 
-        <div className="suggestion-grid">
+        <h2>Your BMI : {bmi}</h2>
 
-          <div className="suggestion-card">
-            <h2>🍽 Recommended Foods</h2>
-            <ul>
-              <li>Oats</li>
-              <li>Brown Rice</li>
-              <li>Eggs</li>
-              <li>Chicken Breast</li>
-              <li>Broccoli</li>
-              <li>Apple</li>
-            </ul>
-          </div>
-
-          <div className="suggestion-card">
-            <h2>🚫 Foods to Avoid</h2>
-            <ul>
-              <li>Soft Drinks</li>
-              <li>Fried Food</li>
-              <li>Fast Food</li>
-              <li>High Sugar Snacks</li>
-            </ul>
-          </div>
-
-          <div className="suggestion-card">
-            <h2>💧 Daily Water Intake</h2>
-            <h3>2.5 Litres</h3>
-          </div>
-
-          <div className="suggestion-card">
-            <h2>🔥 Calories Needed</h2>
-            <h3>2100 kcal/day</h3>
-          </div>
-
-          <div className="suggestion-card">
-            <h2>🏃 Exercise</h2>
-            <p>45 Minutes Walking</p>
-            <p>15 Minutes Stretching</p>
-          </div>
-
-          <div className="suggestion-card">
-            <h2>❤️ Health Tip</h2>
-            <p>
-              Eat fresh fruits daily, stay hydrated and avoid skipping breakfast.
-            </p>
-          </div>
-
-        </div>
+        <ul>
+          {suggestions.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </ul>
 
       </div>
 
-      <Footer />
-    </>
+    </div>
   );
 }
 

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./LandingPage.css";
 
 const features = [
@@ -45,35 +46,45 @@ function LandingPage() {
 
       <section className="hero-section">
         <div className="hero-content">
-          <span className="hero-badge">🌿 Your Personal Nutrition Partner</span>
+
+          <span className="hero-badge">
+            🌿 Your Personal Nutrition Partner
+          </span>
 
           <h1 className="hero-title">
-            Eat Smarter. <span className="highlight">Live Healthier.</span>
+            Eat Smarter.
+            <span className="highlight"> Live Healthier.</span>
           </h1>
 
           <p className="hero-description">
-            Nutrition Assistant helps you track your health, plan balanced
-            meals, and get personalized nutrition suggestions.
+            Nutrition Assistant helps you track your health,
+            plan balanced meals, and get personalized nutrition
+            suggestions.
           </p>
 
           <div className="hero-buttons">
-            <a href="#" className="btn btn-primary">
-              Get Started
-            </a>
 
-            <a href="#" className="btn btn-outline">
+            <Link to="/register" className="btn btn-primary">
+              Get Started
+            </Link>
+
+            <Link to="/login" className="btn btn-outline">
               Login
-            </a>
+            </Link>
+
           </div>
+
         </div>
       </section>
 
       <section className="features-section">
+
         <div className="section-heading">
           <h2>Everything You Need for a Healthier You</h2>
         </div>
 
         <div className="features-grid">
+
           {features.map((feature, index) => (
             <div className="feature-card" key={index}>
               <div className="feature-icon">{feature.icon}</div>
@@ -81,7 +92,9 @@ function LandingPage() {
               <p>{feature.description}</p>
             </div>
           ))}
+
         </div>
+
       </section>
 
       <footer className="landing-footer">

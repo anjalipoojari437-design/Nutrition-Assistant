@@ -1,53 +1,40 @@
-.suggestion-page{
-padding:50px;
-background:#F5FFF7;
+.suggestion-container{
 min-height:100vh;
-}
-
-.suggestion-page h1{
-text-align:center;
-color:#2E7D32;
-margin-bottom:10px;
-}
-
-.subtitle{
-text-align:center;
-color:#666;
-margin-bottom:40px;
-}
-
-.suggestion-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#f4fff4;
+padding:40px;
 }
 
 .suggestion-card{
+width:700px;
 background:white;
-padding:25px;
-border-radius:18px;
-box-shadow:0 8px 20px rgba(0,0,0,.08);
-transition:.3s;
+padding:35px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.1);
 }
 
-.suggestion-card:hover{
-transform:translateY(-8px);
+.suggestion-card h1{
+text-align:center;
+color:#2e7d32;
+margin-bottom:20px;
 }
 
 .suggestion-card h2{
-color:#2E7D32;
-margin-bottom:15px;
-}
-
-.suggestion-card h3{
-font-size:28px;
-color:#1B5E20;
+text-align:center;
+margin-bottom:30px;
 }
 
 .suggestion-card ul{
-padding-left:20px;
+list-style:none;
+padding:0;
 }
 
 .suggestion-card li{
-margin-bottom:10px;
+background:#e8f5e9;
+margin:15px 0;
+padding:18px;
+border-radius:10px;
+font-size:18px;
 }

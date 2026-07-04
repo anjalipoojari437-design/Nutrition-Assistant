@@ -1,71 +1,38 @@
+import React from "react";
 import "./Profile.css";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 
 function Profile() {
+
+  const user = JSON.parse(localStorage.getItem("user"));
+
   return (
-    <>
-      <Navbar />
+    <div className="profile-container">
 
-      <div className="profile-container">
+      <div className="profile-card">
 
-        <div className="profile-card">
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+          alt="Profile"
+          className="profile-img"
+        />
 
-          <div className="profile-top">
+        <h2>{user?.name}</h2>
 
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
-              alt="Profile"
-            />
+        <p>{user?.email}</p>
 
-            <h1>Anupama</h1>
+        <hr />
 
-            <p>Healthy Living Enthusiast 🌿</p>
+        <p><b>Age :</b> {user?.age}</p>
 
-          </div>
+        <p><b>Gender :</b> {user?.gender}</p>
 
-          <div className="profile-details">
+        <p><b>Height :</b> {user?.height} cm</p>
 
-            <div className="detail">
-              <span>📧 Email</span>
-              <strong>anupama@gmail.com</strong>
-            </div>
-
-            <div className="detail">
-              <span>🎂 Age</span>
-              <strong>20 Years</strong>
-            </div>
-
-            <div className="detail">
-              <span>⚖ Weight</span>
-              <strong>53 kg</strong>
-            </div>
-
-            <div className="detail">
-              <span>📏 Height</span>
-              <strong>158 cm</strong>
-            </div>
-
-            <div className="detail">
-              <span>❤️ BMI</span>
-              <strong>21.2</strong>
-            </div>
-
-            <div className="detail">
-              <span>🎯 Goal</span>
-              <strong>Stay Healthy</strong>
-            </div>
-
-          </div>
-
-          <button>Edit Profile</button>
-
-        </div>
+        <p><b>Weight :</b> {user?.weight} kg</p>
 
       </div>
 
-      <Footer />
-    </>
+    </div>
   );
 }
 
