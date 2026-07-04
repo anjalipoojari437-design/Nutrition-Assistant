@@ -1,0 +1,47 @@
+.dashboard{
+padding:50px;
+background:#F5FFF7;
+min-height:100vh;
+}
+
+.dashboard h1{
+text-align:center;
+color:#2E7D32;
+font-size:40px;
+}
+
+.subtitle{
+text-align:center;
+margin:10px 0 40px;
+color:#666;
+font-size:18px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+transition:.3s;
+text-align:center;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card h2{
+color:#2E7D32;
+margin-bottom:15px;
+}
+
+.card h3{
+font-size:32px;
+margin-bottom:10px;
+}

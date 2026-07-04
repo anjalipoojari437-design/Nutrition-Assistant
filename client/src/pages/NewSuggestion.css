@@ -1,0 +1,53 @@
+.suggestion-page{
+padding:50px;
+background:#F5FFF7;
+min-height:100vh;
+}
+
+.suggestion-page h1{
+text-align:center;
+color:#2E7D32;
+margin-bottom:10px;
+}
+
+.subtitle{
+text-align:center;
+color:#666;
+margin-bottom:40px;
+}
+
+.suggestion-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.suggestion-card{
+background:white;
+padding:25px;
+border-radius:18px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.suggestion-card:hover{
+transform:translateY(-8px);
+}
+
+.suggestion-card h2{
+color:#2E7D32;
+margin-bottom:15px;
+}
+
+.suggestion-card h3{
+font-size:28px;
+color:#1B5E20;
+}
+
+.suggestion-card ul{
+padding-left:20px;
+}
+
+.suggestion-card li{
+margin-bottom:10px;
+}
