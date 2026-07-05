@@ -122,7 +122,36 @@ The application can integrate with third-party APIs to fetch nutrition and food 
 - Fast Client-Server Communication
 - Easy Integration with External APIs
 
+## Technical Architecture Diagram
 
+```mermaid
+flowchart LR
+
+    U[User]
+
+    subgraph Frontend
+        UI[User Interface]
+    end
+
+    subgraph Backend
+        API[REST API]
+        NF[Nutrition Functions]
+        DB[(MongoDB Database)]
+    end
+
+    subgraph ExternalServices
+        EXT[External Nutrition APIs]
+    end
+
+    U --> UI
+    UI --> API
+    API --> NF
+    NF --> DB
+    NF --> EXT
+    DB --> NF
+    NF --> API
+    API --> UI
+```
 
 
 
