@@ -1,0 +1,53 @@
+erDiagram
+
+USER ||--o{ MEAL : has
+USER ||--o{ DIETPLAN : owns
+MEAL ||--o{ NUTRITIONFACT : contains
+DIETPLAN ||--o{ NUTRITIONFACT : includes
+
+USER {
+    int userId PK
+    string name
+    string email
+    string password
+    string gender
+    int age
+    float weight
+    float height
+    string activityLevel
+}
+
+FOOD {
+    int foodId PK
+    string foodName
+    int calories
+    float proteins
+    float carbohydrates
+    float fats
+    string servingSize
+}
+
+MEAL {
+    int mealId PK
+    int userId FK
+    string mealType
+    date mealDate
+}
+
+DIETPLAN {
+    int dietPlanId PK
+    int userId FK
+    string planName
+    date startDate
+    date endDate
+}
+
+NUTRITIONFACT {
+    int nutritionFactId PK
+    int mealId FK
+    int dietPlanId FK
+    int calories
+    float proteins
+    float carbohydrates
+    float fats
+}
