@@ -1,0 +1,85 @@
+.userdata-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.userdata-card {
+  width: 100%;
+  max-width: 600px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 35px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.userdata-card h1 {
+  text-align: center;
+  color: #2e7d32;
+  margin-bottom: 25px;
+}
+
+.userdata-card label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.userdata-card input,
+.userdata-card select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+}
+
+.userdata-card input:focus,
+.userdata-card select:focus {
+  border-color: #2e7d32;
+}
+
+.bmi-box {
+  margin-top: 25px;
+  background: #e8f5e9;
+  border-radius: 15px;
+  text-align: center;
+  padding: 20px;
+}
+
+.bmi-box h2 {
+  color: #2e7d32;
+  margin-bottom: 10px;
+}
+
+.bmi-box h1 {
+  font-size: 50px;
+  color: #1b5e20;
+  margin: 0;
+}
+
+.bmi-box h3 {
+  color: #388e3c;
+}
+
+.userdata-card button {
+  width: 100%;
+  margin-top: 25px;
+  padding: 14px;
+  background: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.userdata-card button:hover {
+  background: #1b5e20;
+}
